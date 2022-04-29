@@ -23,11 +23,11 @@ clean:
 .PHONY: clean
 
 gen:
-	cmake -S .. -B build -G $(CMAKE_GENERATOR)
+	cmake -S .. -B build -G $(CMAKE_GENERATOR)  -D CMAKE_BUILD_TYPE=Debug
 .PHONY: gen
 
 build:
-	cmake --build build --parallel 8
+	cmake --build build --parallel 10 --config Debug
 .PHONY: build
 
 open:
